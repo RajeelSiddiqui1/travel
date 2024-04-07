@@ -9,9 +9,7 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(..//assets/addtocart.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+ background: black;
 }
 
 
@@ -96,7 +94,9 @@ font-weight: 700;
 
 /* adddtocart */
 
-
+.navbar-toggler-icon{
+  color: var(--text-color-);
+}
 
 
 

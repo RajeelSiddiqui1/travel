@@ -78,3 +78,64 @@ document.getElementById("subscribeForm").addEventListener("submit", function(eve
 });
 
 // alert
+
+// register
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("flightForm");
+  const validationMessage = document.getElementById("validationMessage");
+  const bookNowBtn = document.getElementById("bookNowBtn");
+
+  bookNowBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const flightSelect = document.getElementById("flightSelect");
+    const peopleInput = document.getElementById("peopleInput");
+    const budgetInput = document.getElementById("budgetInput");
+    const totalCost = parseInt(flightSelect.options[flightSelect.selectedIndex].dataset.price) * parseInt(peopleInput.value);
+
+    if (form.checkValidity() === false) {
+      validationMessage.innerHTML = '<div class="alert alert-danger" role="alert">Please complete all fields correctly.</div>';
+    } else if (totalCost > parseInt(budgetInput.value)) {
+      validationMessage.innerHTML = '<div class="alert alert-danger" role="alert">Total cost exceeds budget. Please adjust the number of people or select a different flight.</div>';
+    } else {
+      // Form is valid, you can handle form submission here
+      validationMessage.innerHTML = `<div class="alert alert-success" role="alert">Thank you for your visit! Your ticket will be processed within 3 days. Total Cost: $${totalCost}</div>`;
+    }
+
+    form.classList.add("was-validated");
+  });
+});
+
+// register
+
+// JSON
+
+var d = document.getElementById("cardjs1")
+fetch("script.json")
+    .then((a) => {
+        return a.json()
+    })
+    .then((b) => {
+        b.forEach((c, index) => {
+          if(c.type=="location"){
+            d.innerHTML += `
+      <div class="col-3">
+      <div class="card">
+        <img src="${c.img}" class="card-img-top img-fluid" alt="">
+        <div class="card-body">
+          <p class="card-title text-center">${c.title}</p>
+          <p class="card-text text-center">${c.desc}</p>
+          <div class="text-center">
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+             `
+              }
+        })
+
+    })  
