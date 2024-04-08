@@ -119,11 +119,12 @@ fetch("script.json")
     })
     .then((b) => {
         b.forEach((c, index) => {
+          console.log(c);
           if(c.type=="location"){
             d.innerHTML += `
       <div class="col-3">
       <div class="card">
-        <img src="${c.img}" class="card-img-top img-fluid" alt="">
+        <img src="../assets/${c.img}" class="card-img-top img-fluid" alt="">
         <div class="card-body">
           <p class="card-title text-center">${c.title}</p>
           <p class="card-text text-center">${c.desc}</p>
