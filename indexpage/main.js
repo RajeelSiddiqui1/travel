@@ -111,32 +111,63 @@ document.addEventListener("DOMContentLoaded", function() {
 // register
 
 // JSON
+var d = document.getElementById("cardjs1");
 
-var d = document.getElementById("cardjs1")
 fetch("script.json")
-    .then((a) => {
-        return a.json()
+    .then((response) => {
+        return response.json();
     })
-    .then((b) => {
-        b.forEach((c, index) => {
-          console.log(c);
-          if(c.type=="location"){
-            d.innerHTML += `
-      <div class="col-3">
-      <div class="card">
-        <img src="../assets/${c.img}" class="card-img-top img-fluid" alt="">
-        <div class="card-body">
-          <p class="card-title text-center">${c.title}</p>
-          <p class="card-text text-center">${c.desc}</p>
-          <div class="text-center">
-            <a href="#" class="btn btn-primary">Book Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-        
-             `
-              }
-        })
+    .then((data) => {
+        data.forEach((item) => {
+            if (item.type === "location") {
+                d.innerHTML += `
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="../assets/${item.img}" class="card-img-top img-fluid" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">${item.title}</h5>
+                                <p class="card-text text-center">${item.desc}</p>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+        });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 
-    })  
+var e = document.getElementById("cardjs2");
+
+fetch("script.json")
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        data.forEach((item) => {
+            if (item.type === "package") {
+                e.innerHTML += `
+                    <div class="col pack-img">
+                        <div class="card">
+                            <img src="../assets/${item.img}" class="card-img-top img-fluid rounded-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.title}</h5>
+                                <p class="card-text">${item.desc}</p>
+                                <p class="card-text">(40 reviews)</p>
+                                <p class="price">$660 <span>/ per person</span></p>
+                                <a href="#" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+        });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+    
+
