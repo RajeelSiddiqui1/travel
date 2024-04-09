@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="booknow.css">
 </head>
-<body style=" background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(..//assets/addtocart.jpg);
+<body style=" background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../assets/bgpackagebk.jpg);
 background-repeat: no-repeat;
-background-size: cover;">
+background-size: cover">
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand px-3" href="#"><img src="../assets/logo.png" alt="" class="img-fluid">FIRSTFLIGHT TRAVELS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="color: white; border: 2px solid white;line-height: white;"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -46,12 +46,8 @@ background-size: cover;">
   <!-- addtocart -->
 
   <div class="container-fluid">
-    <div class="row p-5">
-      <div class="col-lg-6 col-sm-12 p-5 mt-5">
-        <h1 class=" mt-5 text-center">THE TRIP OF YOUR DREAM</h1>
-        <p class=" text-center">Embark on the adventure of a lifetime with 'FIRSTFLIGHT TRAVELS'. Discover breathtaking destinations, immerse yourself in vibrant cultures, and create unforgettable memories. Book your tickets now and turn your dreams into reality. Whether it's exploring ancient ruins, lounging on pristine beaches, or indulging in delicious cuisines, this journey promises to be an experience like no other. Don't miss out on the chance to make your travel dreams come true.</p>
-      </div>
-
+    <div class="row p-5 text-center">
+      <div class="col-12 text-center">
       <div class="col-lg-6 col-sm-12 p-5">
         <form class="row g-3 needs-validation custom-form-bg p-5" id="flightForm" novalidate>
           <div class="col-lg-6 col-sm-12">
@@ -72,32 +68,7 @@ background-size: cover;">
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-sm-12">
-            <label for="fromSelect" class="form-label">From</label>
-            <select class="form-select" id="fromSelect" required>
-              <option selected disabled value="">Choose...</option>
-              <option value="Pakistan">Pakistan</option>
-              <option value="United States">United States</option>
-              <option value="Indonesia">Indonesia</option>
-              <!-- Add more options as needed -->
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid state.
-            </div>      
-          </div>
-          <div class="col-lg-6 col-sm-12">
-            <label for="toSelect" class="form-label">To</label>
-            <select class="form-select" id="toSelect" required>
-              <option selected disabled value="">Choose...</option>
-              <option value="Pakistan">Pakistan</option>
-              <option value="United States">United States</option>
-              <option value="Indonesia">Indonesia</option>
-              <!-- Add more options as needed -->
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid state.
-            </div>      
-          </div>
+         
           <div class="col-md-6">
             <label for="flightSelect" class="form-label">Select Flight</label>
             <select class="form-select" id="flightSelect" required>
@@ -151,7 +122,7 @@ background-size: cover;">
           <div id="validationMessage" class="col-12 mt-3"></div>
         </form>
       </div>
-      
+    </div>
     </div>
   </div>
   <!-- addtocart -->
