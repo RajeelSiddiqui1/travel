@@ -23,13 +23,13 @@ background-size: cover">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="../indexpage/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Location</a>
+            <a class="nav-link" href="../indexpage/index.html">Location</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Packages</a>
+            <a class="nav-link" href="../indexpage/index.html">Packages</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
@@ -46,85 +46,92 @@ background-size: cover">
   <!-- addtocart -->
 
   <div class="container-fluid">
-    <div class="row p-5 text-center">
-      <div class="col-12 text-center">
-      <div class="col-lg-6 col-sm-12 p-5">
-        <form class="row g-3 needs-validation custom-form-bg p-5" id="flightForm" novalidate>
-          <div class="col-lg-6 col-sm-12">
-            <label for="validationCustom01" class="form-label">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
-          </div>
-          <div class="col-lg-6 col-sm-12">
-            <label for="validationCustom01" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="last name" required>
-          </div>
-          <div class="col-lg-12 col-sm-12">
-            <label for="validationCustomUsername" class="form-label">Username</label>
-            <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend">@</span>
-              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-              <div class="invalid-feedback">
-                Please choose a username.
-              </div>
-            </div>
-          </div>
-         
-          <div class="col-md-6">
-            <label for="flightSelect" class="form-label">Select Flight</label>
-            <select class="form-select" id="flightSelect" required>
-              <option selected disabled value="">Choose...</option>
-              <option value="PIA" data-price="300">PIA ($300)</option>
-              <option value="Fly Emirates" data-price="500">Fly Emirates ($500)</option>
-              <option value="Qatar Flights" data-price="400">Qatar Flights ($400)</option>
-              <option value="Embraer E-Jet series (Indonesia)" data-price="250">Embraer E-Jet series (Indonesia) ($250)</option>
-              <option value="Saudi Airline" data-price="350">Saudi Airline ($350)</option>
-              <!-- Add more options as needed -->
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid state.
-            </div>  
-          </div>
-          <div class="col-md-6">
-            <label for="dateInput" class="form-label">Date</label>
-            <input type="date" class="form-control" id="dateInput" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-6">
-            <label for="peopleInput" class="form-label">Number of People</label>
-            <input type="number" class="form-control" id="peopleInput" min="1" required>
-            <div class="invalid-feedback">
-              Please enter a valid number of people.
-            </div>
-          </div>
-          <div class="col-md-6">
-            <label for="budgetInput" class="form-label">Budget</label>
-            <input type="number" class="form-control" id="budgetInput" min="0" required>
-            <div class="invalid-feedback">
-              Please enter a valid budget.
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
-            </div>
-          </div>
-          <div class="col-12 d-grid">
-            <button class="btn btn-primary" id="bookNowBtn" type="button">Book Now..</button>
-          </div>
-          <div id="validationMessage" class="col-12 mt-3"></div>
-        </form>
+    <div class="row">
+      <div class="col-12 text-center px-5 mt-5">
+        <h1>Hajj Package</h1>
+        <p>Embark on a spiritual journey of a lifetime with our exclusive Hajj package. Experience the sacred rituals of Hajj in the holy cities of Mecca and Medina. Our package offers seamless arrangements for accommodation, transportation, and guidance, ensuring a meaningful and hassle-free pilgrimage</p>
       </div>
     </div>
-    </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row p-5 justify-content-center">
+        <div class="col-lg-6 col-sm-12 p-5">
+            <form class="row g-3 needs-validation custom-form-bg p-5" id="flightForm" novalidate>
+                <div class="col-lg-6 col-sm-12">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <label for="validationCustom01" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="last name" required>
+                </div>
+                <div class="col-lg-12 col-sm-12">
+                    <label for="validationCustomUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="flightSelect" class="form-label">Select Flight</label>
+                    <select class="form-select" id="flightSelect" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="PIA" data-price="300">PIA ($600)</option>
+                        <option value="Fly Emirates" data-price="500">Fly Emirates ($1000)</option>
+                        <option value="Qatar Flights" data-price="400">Qatar Flights ($800)</option
+                        <option value="Saudi Airline" data-price="350">Saudi Airline ($600)</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="dateInput" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="dateInput" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="peopleInput" class="form-label">Number of People</label>
+                    <input type="number" class="form-control" id="peopleInput" min="1" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid number of people.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="budgetInput" class="form-label">Budget</label>
+                    <input type="number" class="form-control" id="budgetInput" min="0" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid budget.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-grid">
+                    <button class="btn btn-primary" id="bookNowBtn" type="button">Book Now..</button>
+                </div>
+                <div id="validationMessage" class="col-12 mt-3"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
   <!-- addtocart -->
 
   <!-- Footer -->
