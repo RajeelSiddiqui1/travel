@@ -141,3 +141,25 @@ document.getElementById('contactForm').addEventListener('contact', function(even
   }
   this.classList.add('was-validated');
 });
+
+
+document.getElementById('subscriptionForm').addEventListener('subcribe', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('exampleInputEmail1').value;
+
+  if (!email) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Please enter your email!',
+    });
+  } else {
+    Swal.fire({
+      icon: 'success',
+      title: 'Thank You!',
+      text: 'Thank you for subscribing!',
+    });
+    // Reset the form after successful subscription
+    document.getElementById('subscriptionForm').reset();
+  }
+});
