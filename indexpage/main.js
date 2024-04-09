@@ -110,4 +110,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // register
 
+// contact
 
+document.getElementById('contactForm').addEventListener('contact', function(event) {
+  event.preventDefault();
+  if (this.checkValidity() === false) {
+    event.stopPropagation();
+  } else {
+    var name = document.getElementById('nameInput').value;
+    var phone = document.getElementById('phoneInput').value;
+    var email = document.getElementById('emailInput').value;
+    var message = document.getElementById('messageInput').value;
+
+    if (!message) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please fill the message!',
+      });
+    } else {
+      // Submit the form (you can send it to server or do other actions here)
+      Swal.fire({
+        icon: 'success',
+        title: 'Thank You!',
+        text: 'Thanks for your contact with us.',
+      });
+      // You can also reset the form after successful submission
+      document.getElementById('contactForm').reset();
+    }
+  }
+  this.classList.add('was-validated');
+});
