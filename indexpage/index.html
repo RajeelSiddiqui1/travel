@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="../indexpage/index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#Location">Location</a>
@@ -376,30 +376,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script
   <!-- Custom Script -->
-
-
-<script>
-  document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var email = document.getElementById('exampleInputEmail1').value;
-
-    if (!email) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Please enter your email!',
-      });
-    } else {
-      Swal.fire({
-        icon: 'success',
-        title: 'Thank You!',
-        text: 'Thank you for subscribing!',
-      });
-      // Reset the form after successful subscription
-      document.getElementById('subscriptionForm').reset();
-    }
-  });
-</script>
+<script src="main.js"></script>
 
 </html>
 
